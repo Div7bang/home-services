@@ -1,0 +1,246 @@
+/* ===== Layout ===== */
+.site-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.site-main { flex: 1 0 auto; }
+.site-footer { margin-top: auto; }
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url("/images/home_service.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 2rem;
+}
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+.hero-content p {
+  font-size: 1.1rem;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+}
+
+/* ===== Service Cards ===== */
+.service-card {
+  border: 0;
+  box-shadow: 0 .125rem .5rem rgba(0,0,0,.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.18);
+}
+.service-card-img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.service-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.service-book-btn {
+  margin-top: auto;
+}
+
+/* ===== Team cards ===== */
+.employee-card {
+  border: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 .25rem .75rem rgba(0,0,0,.14);
+  transition: transform 0.2s;
+}
+.employee-card:hover { transform: translateY(-3px); }
+.employee-img {
+  height: 260px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.employee-card-body { padding: 1rem; text-align: center; }
+.employee-name { font-size: 1.05rem; font-weight: 700; }
+.employee-role { color: #6c757d; font-size: 0.9rem; }
+
+/* ===== Client cards ===== */
+.client-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ===== About section ===== */
+.about-media-wrap {
+  height: 100%;
+  min-height: 360px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,.14);
+}
+.about-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.about-content-wrap {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+.about-item {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.about-item:last-of-type { margin-bottom: 0; }
+.about-item-title { font-weight: 700; margin-bottom: 0.4rem; }
+.about-item-text { color: #4a4a4a; line-height: 1.7; }
+.about-cta-btn { margin-top: 1.25rem; }
+@media(max-width:991.98px){ .about-media-wrap { min-height: 280px; } }
+
+/* ===== Banner section ===== */
+.banner-section {
+  background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("/images/home_service.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+.banner-content-wrap { width: 100%; display: flex; justify-content: flex-end; }
+.banner-content { max-width: 620px; color: #fff; text-align: right; }
+.banner-kicker { font-size: 0.8rem; text-transform: uppercase; color: #f5d88b; }
+.banner-title { font-size: 2rem; margin-bottom: 0.75rem; }
+.banner-actions { margin-top: 1rem; }
+@media(max-width:991.98px){
+  .banner-content-wrap { justify-content: center; }
+  .banner-content { text-align: center; }
+}
+
+/* ===== Admin & User Login ===== */
+.admin-login-scene {
+  position: relative;
+  min-height: calc(100vh - 56px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.admin-login-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(15,23,42,0.5) 0%, rgba(15,23,42,0.65) 50%, rgba(15,23,42,0.2) 100%);
+  z-index: 1;
+}
+.admin-login-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.admin-login-form-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 430px;
+  margin-left: clamp(1rem, 4vw, 3.5rem);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.admin-login-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.45);
+}
+.admin-login-subtitle {
+  color: #f2f4f7;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 1px 8px rgba(0,0,0,.45);
+}
+.admin-login-form .form-control {
+  height: 46px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.9);
+}
+.admin-login-form .btn {
+  border-radius: 10px;
+  height: 46px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+.admin-login-form .form-label {
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0 1px 8px rgba(0,0,0,.55);
+}
+.admin-login-message {
+  min-height: 1.5rem;
+  font-size: 0.95rem;
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(0,0,0,.55);
+}
+.admin-login-message.success { color: #a3e635; }
+.admin-login-message.error { color: #fca5a5; }
+@media(max-width:991.98px){
+  .admin-login-form-wrap { margin: 1rem; max-width: none; }
+}
+
+/* ===== Contact form ===== */
+.contact-form-wrap {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+/* ===== Book service ===== */
+.book-service-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,.1);
+}
+.book-service-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "home-service-booking",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "install:client": "npm --prefix client install",
+    "build": "npm --prefix client install && npm --prefix client run build",
+    "dev:client": "npm --prefix client run dev",
+    "setup": "npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Home service booking with admin & user auth",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "body-parser": "^2.2.2",
+    "bootstrap": "^5.3.8",
+    "connect-mongo": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.3.1"
+  }
+}
